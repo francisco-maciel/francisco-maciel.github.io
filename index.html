@@ -30,6 +30,29 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript">
+
+	function calculateAge(birthMonth, birthDay, birthYear)
+	{
+	  todayDate = new Date();
+	  todayYear = todayDate.getFullYear();
+	  todayMonth = todayDate.getMonth();
+	  todayDay = todayDate.getDate();
+	  age = todayYear - birthYear; 
+
+	  if (todayMonth < birthMonth - 1)
+	  {
+		age--;
+	  }
+
+	  if (birthMonth - 1 == todayMonth && todayDay < birthDay)
+	  {
+		age--;
+	  }
+	  return age;
+	}
+
+	</script>
     <link rel="stylesheet" type="text/css"  href="css/custom.css">
 
     <!--[if lt IE 9]>
@@ -86,7 +109,14 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">Hello! My name is Francisco Maciel. I am 21 years old, and I was born and raised in a beautiful city called Porto, in Portugal</p>
+                        <p class="intro">Hello! My name is Francisco Maciel. I am <script type="text/javascript">
+						
+						// life expectancy of 82 calculated for myself
+						var age = calculateAge(23,12,1993);
+						var deceased = ""; 
+						document.write(age + " years old" + (age >= 82 ? " (probably dead)" : ""));
+						
+						</script>, and I was born and raised in a beautiful city called Porto, in Portugal</p>
 						<p class="intro">I am currently finishing my master's degree in Informatic Engineering in University of Porto</p>
 						<p class="intro">I love developing software, and have been learning many different technologies and methodologies, getting better at finding solutions and creating software using many different approaches.</p>
 
