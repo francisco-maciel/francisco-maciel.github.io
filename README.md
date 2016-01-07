@@ -1,5 +1,4 @@
 # francisco-maciel.github.io
-==========================
 
 Personal web page repository - Work in Progress
 
