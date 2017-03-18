@@ -34,11 +34,11 @@
 
 	function calculateAge(birthMonth, birthDay, birthYear)
 	{
-	  todayDate = new Date();
-	  todayYear = todayDate.getFullYear();
-	  todayMonth = todayDate.getMonth();
-	  todayDay = todayDate.getDate();
-	  age = todayYear - birthYear; 
+	  var todayDate = new Date();
+	  var todayYear = todayDate.getFullYear();
+	  var todayMonth = todayDate.getMonth();
+	  var todayDay = todayDate.getDate();
+	  var age = todayYear - birthYear; 
 
 	  if (todayMonth < birthMonth - 1)
 	  {
@@ -99,7 +99,7 @@
             <div class="content">
                 <h1>Hello! My name is <strong><span class="color"> Francisco Maciel</span></strong></h1>
 				<p></p>
-                <h3 class="lead">I am a <strong>software developer</strong></h3>
+                <h3 class="lead">I am a <strong>software engineer</strong></h3>
 
             </div>
         </div>
@@ -123,7 +123,6 @@
 						
 						// life expectancy of 82 calculated for myself
 						var age = calculateAge(23,12,1993);
-						var deceased = ""; 
 						document.write(age + " years old" + (age >= 82 ? " (probably dead)" : ""));
 						
 						</script>, and I was born and raised in a beautiful city called Porto, in Portugal</p>
@@ -137,7 +136,7 @@
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Main skills</strong> - <em>Software development, Teamwork, Dedication</em>
+                                <strong>Main skills</strong> - <em>Software engineering, Teamwork, Dedication</em>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
